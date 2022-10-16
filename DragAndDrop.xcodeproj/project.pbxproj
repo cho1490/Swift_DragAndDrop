@@ -9,20 +9,23 @@
 /* Begin PBXBuildFile section */
 		DE00802428F992B200F2C570 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE00802328F992B200F2C570 /* AppDelegate.swift */; };
 		DE00802628F992B200F2C570 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE00802528F992B200F2C570 /* SceneDelegate.swift */; };
-		DE00802828F992B200F2C570 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE00802728F992B200F2C570 /* ViewController.swift */; };
+		DE00802828F992B200F2C570 /* FieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE00802728F992B200F2C570 /* FieldViewController.swift */; };
 		DE00802D28F992BA00F2C570 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE00802C28F992BA00F2C570 /* Assets.xcassets */; };
 		DEAFBCDD28F9967C00739A99 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAFBCDC28F9967C00739A99 /* Player.swift */; };
 		DEAFBCE028F9979700739A99 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAFBCDF28F9979700739A99 /* Position.swift */; };
 		DEAFBCE328F9982500739A99 /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAFBCE228F9982500739A99 /* Stat.swift */; };
 		DEAFBCE528F998B400739A99 /* Physical.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAFBCE428F998B400739A99 /* Physical.swift */; };
 		DEAFBCE828F99F2A00739A99 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAFBCE728F99F2A00739A99 /* PlayerView.swift */; };
+		DEAFBCEA28FC135C00739A99 /* PlayerDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAFBCE928FC135C00739A99 /* PlayerDefaultView.swift */; };
+		DEAFBCEC28FC13F400739A99 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAFBCEB28FC13F400739A99 /* CardView.swift */; };
+		DEAFBCEE28FC25B400739A99 /* Formation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAFBCED28FC25B300739A99 /* Formation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DE00802028F992B200F2C570 /* DragAndDrop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragAndDrop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE00802328F992B200F2C570 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE00802528F992B200F2C570 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DE00802728F992B200F2C570 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DE00802728F992B200F2C570 /* FieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldViewController.swift; sourceTree = "<group>"; };
 		DE00802C28F992BA00F2C570 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE00803128F992BA00F2C570 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEAFBCDC28F9967C00739A99 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -30,6 +33,9 @@
 		DEAFBCE228F9982500739A99 /* Stat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
 		DEAFBCE428F998B400739A99 /* Physical.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Physical.swift; sourceTree = "<group>"; };
 		DEAFBCE728F99F2A00739A99 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		DEAFBCE928FC135C00739A99 /* PlayerDefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDefaultView.swift; sourceTree = "<group>"; };
+		DEAFBCEB28FC13F400739A99 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		DEAFBCED28FC25B300739A99 /* Formation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +73,7 @@
 				DEAFBCDB28F9965D00739A99 /* Model */,
 				DE00802328F992B200F2C570 /* AppDelegate.swift */,
 				DE00802528F992B200F2C570 /* SceneDelegate.swift */,
-				DE00802728F992B200F2C570 /* ViewController.swift */,
+				DE00802728F992B200F2C570 /* FieldViewController.swift */,
 				DE00802C28F992BA00F2C570 /* Assets.xcassets */,
 				DE00803128F992BA00F2C570 /* Info.plist */,
 			);
@@ -77,6 +83,7 @@
 		DEAFBCDB28F9965D00739A99 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DEAFBCED28FC25B300739A99 /* Formation.swift */,
 				DEAFBCDC28F9967C00739A99 /* Player.swift */,
 				DEAFBCE228F9982500739A99 /* Stat.swift */,
 				DEAFBCE428F998B400739A99 /* Physical.swift */,
@@ -95,6 +102,8 @@
 		DEAFBCE628F99F1900739A99 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				DEAFBCEB28FC13F400739A99 /* CardView.swift */,
+				DEAFBCE928FC135C00739A99 /* PlayerDefaultView.swift */,
 				DEAFBCE728F99F2A00739A99 /* PlayerView.swift */,
 			);
 			path = CustomView;
@@ -170,8 +179,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEAFBCDD28F9967C00739A99 /* Player.swift in Sources */,
-				DE00802828F992B200F2C570 /* ViewController.swift in Sources */,
+				DE00802828F992B200F2C570 /* FieldViewController.swift in Sources */,
+				DEAFBCEA28FC135C00739A99 /* PlayerDefaultView.swift in Sources */,
+				DEAFBCEE28FC25B400739A99 /* Formation.swift in Sources */,
 				DE00802428F992B200F2C570 /* AppDelegate.swift in Sources */,
+				DEAFBCEC28FC13F400739A99 /* CardView.swift in Sources */,
 				DEAFBCE828F99F2A00739A99 /* PlayerView.swift in Sources */,
 				DEAFBCE328F9982500739A99 /* Stat.swift in Sources */,
 				DEAFBCE528F998B400739A99 /* Physical.swift in Sources */,
