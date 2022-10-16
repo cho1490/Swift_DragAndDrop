@@ -19,7 +19,7 @@ class PlayerDefaultView: UIView {
     }
     
     func initialize() {
-        backgroundColor = .black
+        backgroundColor = .yellow
     }
     
 }

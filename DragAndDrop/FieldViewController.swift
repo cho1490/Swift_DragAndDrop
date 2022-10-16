@@ -44,6 +44,7 @@ class FieldViewController: UIViewController {
                         
         for cardView in cardViews {
             cardView.setPosition(position: formation.getNextPosition())
+            view.addSubview(cardView)
             
             cardView.translatesAutoresizingMaskIntoConstraints = false
             cardView.heightAnchor.constraint(equalToConstant: 100).isActive = true
@@ -76,8 +77,6 @@ class FieldViewController: UIViewController {
                     cardView.centerYAnchor.constraint(equalTo: view.topAnchor, constant: zoneGK)
                 ])
             }
-                        
-            view.addSubview(cardView)
         }
     }
 
