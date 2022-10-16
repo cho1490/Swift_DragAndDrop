@@ -15,6 +15,7 @@
 		DEAFBCE028F9979700739A99 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAFBCDF28F9979700739A99 /* Position.swift */; };
 		DEAFBCE328F9982500739A99 /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAFBCE228F9982500739A99 /* Stat.swift */; };
 		DEAFBCE528F998B400739A99 /* Physical.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAFBCE428F998B400739A99 /* Physical.swift */; };
+		DEAFBCE828F99F2A00739A99 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAFBCE728F99F2A00739A99 /* PlayerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		DEAFBCDF28F9979700739A99 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		DEAFBCE228F9982500739A99 /* Stat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
 		DEAFBCE428F998B400739A99 /* Physical.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Physical.swift; sourceTree = "<group>"; };
+		DEAFBCE728F99F2A00739A99 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		DE00802228F992B200F2C570 /* DragAndDrop */ = {
 			isa = PBXGroup;
 			children = (
+				DEAFBCE628F99F1900739A99 /* CustomView */,
 				DEAFBCE128F9979D00739A99 /* Enum */,
 				DEAFBCDB28F9965D00739A99 /* Model */,
 				DE00802328F992B200F2C570 /* AppDelegate.swift */,
@@ -87,6 +90,14 @@
 				DEAFBCDF28F9979700739A99 /* Position.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		DEAFBCE628F99F1900739A99 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				DEAFBCE728F99F2A00739A99 /* PlayerView.swift */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +172,7 @@
 				DEAFBCDD28F9967C00739A99 /* Player.swift in Sources */,
 				DE00802828F992B200F2C570 /* ViewController.swift in Sources */,
 				DE00802428F992B200F2C570 /* AppDelegate.swift in Sources */,
+				DEAFBCE828F99F2A00739A99 /* PlayerView.swift in Sources */,
 				DEAFBCE328F9982500739A99 /* Stat.swift in Sources */,
 				DEAFBCE528F998B400739A99 /* Physical.swift in Sources */,
 				DEAFBCE028F9979700739A99 /* Position.swift in Sources */,
