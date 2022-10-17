@@ -33,7 +33,22 @@ class CardView: UIView {
     
     func initialize() {
         addSubview(playerDefaultView)
+        playerDefaultView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            playerDefaultView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            playerDefaultView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            playerDefaultView.heightAnchor.constraint(equalToConstant: frame.height),
+            playerDefaultView.widthAnchor.constraint(equalToConstant: frame.width)
+        ])
+        
         addSubview(playerView)
+        playerView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            playerView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            playerView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            playerView.heightAnchor.constraint(equalToConstant: frame.height),
+            playerView.widthAnchor.constraint(equalToConstant: frame.width)
+        ])                
     }
     
     func setPosition(position: Position) {
@@ -49,18 +64,5 @@ class CardView: UIView {
         playerDefaultView.isHidden = true
         playerView.isHidden = false
     }
-    
-    func setConstranin() {
-        playerDefaultView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            
-        ])
-        
-        playerView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-        
-        ])
-    }
-    
     
 }
