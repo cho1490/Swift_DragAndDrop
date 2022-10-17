@@ -11,6 +11,7 @@
 		DE00802628F992B200F2C570 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE00802528F992B200F2C570 /* SceneDelegate.swift */; };
 		DE00802828F992B200F2C570 /* FieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE00802728F992B200F2C570 /* FieldViewController.swift */; };
 		DE00802D28F992BA00F2C570 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE00802C28F992BA00F2C570 /* Assets.xcassets */; };
+		DE8D71E328FD8D4400AD0746 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8D71E228FD8D4400AD0746 /* LaunchScreen.storyboard */; };
 		DEAFBCDD28F9967C00739A99 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAFBCDC28F9967C00739A99 /* Player.swift */; };
 		DEAFBCE028F9979700739A99 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAFBCDF28F9979700739A99 /* Position.swift */; };
 		DEAFBCE328F9982500739A99 /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAFBCE228F9982500739A99 /* Stat.swift */; };
@@ -19,6 +20,7 @@
 		DEAFBCEA28FC135C00739A99 /* PlayerDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAFBCE928FC135C00739A99 /* PlayerDefaultView.swift */; };
 		DEAFBCEC28FC13F400739A99 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAFBCEB28FC13F400739A99 /* CardView.swift */; };
 		DEAFBCEE28FC25B400739A99 /* Formation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAFBCED28FC25B300739A99 /* Formation.swift */; };
+		DEAFBCF028FD859F00739A99 /* FieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAFBCEF28FD859F00739A99 /* FieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,7 @@
 		DE00802728F992B200F2C570 /* FieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldViewController.swift; sourceTree = "<group>"; };
 		DE00802C28F992BA00F2C570 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE00803128F992BA00F2C570 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE8D71E228FD8D4400AD0746 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEAFBCDC28F9967C00739A99 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		DEAFBCDF28F9979700739A99 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		DEAFBCE228F9982500739A99 /* Stat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
@@ -36,6 +39,7 @@
 		DEAFBCE928FC135C00739A99 /* PlayerDefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDefaultView.swift; sourceTree = "<group>"; };
 		DEAFBCEB28FC13F400739A99 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		DEAFBCED28FC25B300739A99 /* Formation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formation.swift; sourceTree = "<group>"; };
+		DEAFBCEF28FD859F00739A99 /* FieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FieldView.swift; path = ../CustomView/FieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,14 +72,16 @@
 		DE00802228F992B200F2C570 /* DragAndDrop */ = {
 			isa = PBXGroup;
 			children = (
+				DEAFBCF128FD86C400739A99 /* View */,
+				DEAFBCF228FD86C800739A99 /* ViewController */,
 				DEAFBCE628F99F1900739A99 /* CustomView */,
 				DEAFBCE128F9979D00739A99 /* Enum */,
 				DEAFBCDB28F9965D00739A99 /* Model */,
 				DE00802328F992B200F2C570 /* AppDelegate.swift */,
 				DE00802528F992B200F2C570 /* SceneDelegate.swift */,
-				DE00802728F992B200F2C570 /* FieldViewController.swift */,
 				DE00802C28F992BA00F2C570 /* Assets.xcassets */,
 				DE00803128F992BA00F2C570 /* Info.plist */,
+				DE8D71E228FD8D4400AD0746 /* LaunchScreen.storyboard */,
 			);
 			path = DragAndDrop;
 			sourceTree = "<group>";
@@ -107,6 +113,22 @@
 				DEAFBCE728F99F2A00739A99 /* PlayerView.swift */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		DEAFBCF128FD86C400739A99 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DEAFBCEF28FD859F00739A99 /* FieldView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DEAFBCF228FD86C800739A99 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DE00802728F992B200F2C570 /* FieldViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE00802D28F992BA00F2C570 /* Assets.xcassets in Resources */,
+				DE8D71E328FD8D4400AD0746 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEAFBCDD28F9967C00739A99 /* Player.swift in Sources */,
+				DEAFBCF028FD859F00739A99 /* FieldView.swift in Sources */,
 				DE00802828F992B200F2C570 /* FieldViewController.swift in Sources */,
 				DEAFBCEA28FC135C00739A99 /* PlayerDefaultView.swift in Sources */,
 				DEAFBCEE28FC25B400739A99 /* Formation.swift in Sources */,
@@ -245,7 +269,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -299,7 +323,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -320,6 +344,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DragAndDrop/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -346,6 +371,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DragAndDrop/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
