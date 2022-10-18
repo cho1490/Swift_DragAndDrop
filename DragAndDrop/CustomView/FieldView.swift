@@ -11,8 +11,9 @@ class FieldView: UIView {
     
     var formation: Formation = Formation(FW: 3, MF: 3, DF: 4, GK: 1)
     
-    var cardViews: [CardView] = (0...10).map() { _ in
+    var cardViews: [CardView] = (0...10).map() { index in
         let cardView = CardView(frame: CGRect(x: 0, y: 0, width: 45, height: 65))
+        cardView.tag = index
         return cardView
     }
     
@@ -31,9 +32,11 @@ class FieldView: UIView {
     }
     
     func initialize() {
-        backgroundColor = .blue
+        backgroundColor = .systemBackground
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(drag))
         
         for cardView in cardViews {
+            cardView.addGestureRecognizer(panGesture)
             cardView.setPosition(position: formation.getNextPosition())
             addSubview(cardView)
             cardView.translatesAutoresizingMaskIntoConstraints = false
@@ -49,7 +52,7 @@ class FieldView: UIView {
         let distanceDF = width / CGFloat(formation.DF + 1)
         let distanceGK = width / CGFloat(formation.GK + 1)
         
-        let zone = height / 5 // 5 = 4 (Line) + 1
+        let zone = height / 5
         zoneFW = zone
         zoneMF = zone * 2
         zoneDF = zone * 3
@@ -82,8 +85,15 @@ class FieldView: UIView {
             }
         }
     }
-    
-    func addSubView() {
+
+    @objc func drag(sender: UIPanGestureRecognizer) {
+        print("실행 drag")
+        if let view = sender.view {
+            let cardView = cardViews[view.tag]
+            let translation = sender.translation(in: cardView)
+            view.center = CGPoint(x: view.center.x + translation.x, y: view.center.y + translation.y)
+            sender.setTranslation(.zero, in: cardView)
+        }
         
     }
     

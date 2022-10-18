@@ -32,6 +32,8 @@ class CardView: UIView {
     }
     
     func initialize() {
+        isUserInteractionEnabled = true
+        
         addSubview(playerDefaultView)
         playerDefaultView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
