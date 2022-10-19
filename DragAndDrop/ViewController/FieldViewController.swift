@@ -26,9 +26,21 @@ class FieldViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        selfView.setCardView()
+                        
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(drag))
+        panGesture.delaysTouchesBegan = false
+        panGesture.delaysTouchesEnded = false
+        selfView.setCardViews(dragGesture: panGesture)
     }
     
+    @objc func drag(sender: UIPanGestureRecognizer) {
+        print("gdgd1")
+        if let view = sender.view {
+            let translation = sender.translation(in: view)
+            view.center = CGPoint(x: view.center.x + translation.x, y: view.center.y + translation.y)
+            sender.setTranslation(.zero, in: view)
+        }
+    }
+
 }
 

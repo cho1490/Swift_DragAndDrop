@@ -19,6 +19,7 @@ class PlayerDefaultView: UIView {
     }
     
     func initialize() {
+        isUserInteractionEnabled = false
         backgroundColor = .yellow
     }
     
