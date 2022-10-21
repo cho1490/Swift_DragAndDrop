@@ -53,11 +53,11 @@ class FieldView: UIView {
         let distanceGK = width / CGFloat(formation.GK + 1)
         
         let zone = height / (4 + 1)
-        zoneFW = zone   
+        zoneFW = zone
         zoneMF = zone * 2
         zoneDF = zone * 3
         zoneGK = zone * 4
-                        
+                          
         for cardView in cardViews {
             cardView.addGestureRecognizer(dragGesture)
             
