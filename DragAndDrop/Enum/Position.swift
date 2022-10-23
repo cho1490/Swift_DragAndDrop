@@ -7,38 +7,61 @@
 
 enum Position {
         
-    case ST
-    case CF
-    case LF
-    case RF
+    // FW .LW, .LS, .ST, .RS, .RW, .LF, .CF, .RF
     case LW
+    case LS
+    case ST
+    case RS
     case RW
     
-    case CAM
+    case LF
+    case CF
+    case RF
+    // FW
+    
+    // MF .LM, .LAM, .CAM, .RAM, .RM, .LCM, .CM, .RCM, .LDM, .CDM, .RDM
     case LM
+    case LAM
+    case CAM
+    case RAM
     case RM
+    
+    case LCM
     case CM
+    case RCM
+    
+    case LDM
     case CDM
-        
-    case CB
+    case RDM
+    // MF
+    
+    // DF .LWB, .RWB, .LB, .LCB, .CB, .RCB, .RB, .SW
     case LWB
     case RWB
+    
     case LB
+    case LCB
+    case CB
+    case RCB
     case RB
+    
     case SW
+    // DF
             
     case FW
     case MF
     case DF
+    
+    // GK
     case GK
     
     func getLine() -> Position {
         switch self {
-        case .ST, .CF, .LF, .RF, .LW, .RW, .FW:
+        case .LW, .LS, .ST, .RS, .RW, .LF, .CF, .RF, .FW:
             return .FW
-        case .CAM, .LM, .RM, .CM, .CDM, .MF:
+        case .LM, .LAM, .CAM, .RAM, .RM, .LCM, .CM, .RCM, .LDM, .CDM, .RDM, .MF:
             return .MF
-        case .CB, .LWB, .RWB, .LB, .RB, .SW, .DF:
+        case .LWB, .RWB, .LB, .LCB, .CB, .RCB, .RB, .SW, .DF:
             return .DF
         case .GK:
             return .GK            

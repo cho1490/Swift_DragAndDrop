@@ -9,10 +9,10 @@ import UIKit
 
 class CardView: UIView {
     
-    private var position: Position = .GK
+    private var position: Position = .GK        
     
     let playerDefaultView: PlayerDefaultView = {
-        let playerDefaultView = PlayerDefaultView()
+        let playerDefaultView = PlayerDefaultView()        
         return playerDefaultView
     }()
     
@@ -32,23 +32,26 @@ class CardView: UIView {
     }
     
     func initialize() {
+        isUserInteractionEnabled = true
+        backgroundColor = .yellow
+        
         addSubview(playerDefaultView)
         playerDefaultView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            playerDefaultView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            playerDefaultView.topAnchor.constraint(equalTo: topAnchor),
-            playerDefaultView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            playerDefaultView.bottomAnchor.constraint(equalTo: bottomAnchor)
-        ])
+//        NSLayoutConstraint.activate([
+//            playerDefaultView.leadingAnchor.constraint(equalTo: superview?.leadingAnchor),
+//            playerDefaultView.topAnchor.constraint(equalTo: topAnchor),
+//            playerDefaultView.trailingAnchor.constraint(equalTo: trailingAnchor),
+//            playerDefaultView.bottomAnchor.constraint(equalTo: bottomAnchor)
+//        ])
         
         addSubview(playerView)
-        playerView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            playerView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            playerView.topAnchor.constraint(equalTo: topAnchor),
-            playerView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            playerView.bottomAnchor.constraint(equalTo: bottomAnchor)
-        ])                
+//        playerView.translatesAutoresizingMaskIntoConstraints = false
+//        NSLayoutConstraint.activate([
+//            playerView.leadingAnchor.constraint(equalTo: leadingAnchor),
+//            playerView.topAnchor.constraint(equalTo: topAnchor),
+//            playerView.trailingAnchor.constraint(equalTo: trailingAnchor),
+//            playerView.bottomAnchor.constraint(equalTo: bottomAnchor)
+//        ])
     }
     
     func setPosition(position: Position) {

@@ -11,6 +11,7 @@
 		DE00802628F992B200F2C570 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE00802528F992B200F2C570 /* SceneDelegate.swift */; };
 		DE00802828F992B200F2C570 /* FieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE00802728F992B200F2C570 /* FieldViewController.swift */; };
 		DE00802D28F992BA00F2C570 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE00802C28F992BA00F2C570 /* Assets.xcassets */; };
+		DE2F61EA29053AD900588F6E /* PositionPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2F61E929053AD900588F6E /* PositionPoint.swift */; };
 		DE8D71E328FD8D4400AD0746 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8D71E228FD8D4400AD0746 /* LaunchScreen.storyboard */; };
 		DEAFBCDD28F9967C00739A99 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAFBCDC28F9967C00739A99 /* Player.swift */; };
 		DEAFBCE028F9979700739A99 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAFBCDF28F9979700739A99 /* Position.swift */; };
@@ -30,6 +31,7 @@
 		DE00802728F992B200F2C570 /* FieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldViewController.swift; sourceTree = "<group>"; };
 		DE00802C28F992BA00F2C570 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE00803128F992BA00F2C570 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE2F61E929053AD900588F6E /* PositionPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionPoint.swift; sourceTree = "<group>"; };
 		DE8D71E228FD8D4400AD0746 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEAFBCDC28F9967C00739A99 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		DEAFBCDF28F9979700739A99 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				DEAFBCED28FC25B300739A99 /* Formation.swift */,
+				DE2F61E929053AD900588F6E /* PositionPoint.swift */,
 				DEAFBCDC28F9967C00739A99 /* Player.swift */,
 				DEAFBCE228F9982500739A99 /* Stat.swift */,
 				DEAFBCE428F998B400739A99 /* Physical.swift */,
@@ -212,6 +215,7 @@
 				DEAFBCE328F9982500739A99 /* Stat.swift in Sources */,
 				DEAFBCE528F998B400739A99 /* Physical.swift in Sources */,
 				DEAFBCE028F9979700739A99 /* Position.swift in Sources */,
+				DE2F61EA29053AD900588F6E /* PositionPoint.swift in Sources */,
 				DE00802628F992B200F2C570 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,6 +342,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AN529668XK;
@@ -354,6 +359,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.csh.DragAndDrop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -365,6 +371,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AN529668XK;
@@ -381,6 +388,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.csh.DragAndDrop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
