@@ -110,4 +110,114 @@ struct PositionPoint {
     var endGK: CGPoint = CGPoint(x: 0, y: 0)
     // GK
     
+    init(frame: CGRect) {
+        let height = frame.height
+        let width = frame.width
+        
+        // Y ZONE
+        let zone = height / 4
+        startFW = CGPoint(x: 0, y: 0)
+        endFW = CGPoint(x: frame.width, y: zone)
+                
+        startMF = CGPoint(x: 0, y: endFW.y)
+        endMF = CGPoint(x: frame.width, y: zone * 2)
+        
+        startDF = CGPoint(x: 0, y: endMF.y)
+        endDF = CGPoint(x: frame.width, y: zone * 3)
+        
+        startGK = CGPoint(x: 0, y: endDF.y)
+        endGK = CGPoint(x: frame.width, y: zone * 4)
+        // Y ZONE
+        
+        // Position ZONE
+        // FW
+        let widthLWRW = width / 4
+        startLW = CGPoint(x: startFW.x, y: startFW.y)
+        endLW = CGPoint(x: startFW.x + widthLWRW, y: endFW.y)
+        print("LW.s: \(startLW.x), \(startLW.y)")
+        print("LW.e: \(endLW.x), \(endLW.y)")
+        
+        let heightST = (endFW.y - startFW.y) / 2
+        let widthST = (width - (widthLWRW * 2)) / 3
+        startLS = CGPoint(x: endLW.x, y: startFW.y)
+        endLS = CGPoint(x: endLW.x + widthST, y: startFW.y + heightST)
+        print("LS.s: \(startLS.x), \(startLS.y)")
+        print("LS.e: \(endLS.x), \(endLS.y)")
+    
+        startST = CGPoint(x: endLS.x, y: startFW.y)
+        endST = CGPoint(x: endLS.x + widthST, y: startFW.y + heightST)
+        
+        startRS = CGPoint(x: endST.x, y: startFW.y)
+        endRS = CGPoint(x: endST.x + widthST, y: startFW.y + heightST)
+        
+        startRW = CGPoint(x: endFW.x - widthLWRW, y: startFW.y)
+        endRW = CGPoint(x: endFW.x, y: endFW.y)
+        print("LW.s: \(startRW.x), \(startRW.y)")
+        print("LW.e: \(endRW.x), \(endRW.y)")
+        
+        let widthCF = (width - (widthLWRW * 2)) / 3
+        startLF = CGPoint(x: endLW.x, y: startFW.y + heightST)
+        endLF = CGPoint(x: endLW.x + widthCF, y: endFW.y)
+        print("LF.s: \(startLF.x), \(startLF.y)")
+        print("LF.e: \(endLF.x), \(endLF.y)")
+        
+        startCF = CGPoint(x: endLF.x, y: startFW.y + heightST)
+        endCF = CGPoint(x: endLF.x + widthCF, y: endFW.y)
+        
+        startRF = CGPoint(x: endCF.x, y: startFW.y + heightST)
+        endRF = CGPoint(x: endFW.x - widthLWRW, y: endFW.y)
+        // FW
+        
+        // MF
+        // MF
+        
+        // DF
+        // DF
+        
+        // GK
+        // GK
+        // Position ZONE
+    }
+    
+    func getPosition(point: CGPoint) -> Position {
+        let x = point.x
+        let y = point.y
+        
+        print("x: \(x), y: \(y)")
+        
+        if startLW.x <= x && x <= endLW.x && startLW.y <= y && y <= endLW.y {
+            return .LW
+        }
+        
+        if startLS.x <= x && x <= endLS.x && startLS.y <= y && y <= endLS.y {
+            return .LS
+        }
+        
+        if startST.x <= x && x <= endST.x && startST.y <= y && y <= endST.y {
+            return .ST
+        }
+        
+        if startRS.x <= x && x <= endRS.x && startRS.y <= y && y <= endRS.y {
+            return .RS
+        }
+        
+        if startRW.x <= x && x <= endRW.x && startRW.y <= y && y <= endRW.y {
+            return .RW
+        }
+
+        if startLF.x <= x && x <= endLF.x && startLF.y <= y && y <= endLF.y {
+            return .LF
+        }
+        
+        if startCF.x <= x && x <= endCF.x && startCF.y <= y && y <= endCF.y {
+            return .CF
+        }
+        
+        if startRF.x <= x && x <= endRF.x && startRF.y <= y && y <= endRF.y {
+            return .RF
+        }
+        
+        return .GK
+    }
+    
 }

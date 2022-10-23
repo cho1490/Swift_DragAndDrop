@@ -11,7 +11,7 @@ class FieldView: UIView {
     
     private var formation: Formation = Formation(FW: 3, MF: 3, DF: 4, GK: 1)
     
-    private var positionPoint: PositionPoint = PositionPoint()
+    private var positionPoint: PositionPoint = PositionPoint(frame: .zero)
     
     private var cardViews: [CardView] = (0...10).map() { index in
         let cardView = CardView(frame: CGRect(x: 0, y: 0, width: 45, height: 65))
@@ -43,43 +43,10 @@ class FieldView: UIView {
     }
     
     func setPositionPoint() {
-        let height = frame.height
-        let width = frame.width
-        
-        // zone (Y)
-        let zone = height / 4
-        positionPoint.startFW = CGPoint(x: 0, y: 0)
-        positionPoint.endFW = CGPoint(x: frame.width, y: zone)
-                
-        positionPoint.startMF = CGPoint(x: 0, y: positionPoint.endFW.y + 1)
-        positionPoint.endMF = CGPoint(x: frame.width, y: zone * 2)
-        
-        positionPoint.startDF = CGPoint(x: 0, y: positionPoint.endMF.y + 1)
-        positionPoint.endDF = CGPoint(x: frame.width, y: zone * 3)
-        
-        positionPoint.startGK = CGPoint(x: 0, y: positionPoint.endDF.y + 1)
-        positionPoint.endGK = CGPoint(x: frame.width, y: zone * 4)
-        // zone (Y)
-        
-        // zone (X)
-        // FW
-        positionPoint.startLW = CGPoint(x: 0, y: 0)
-        positionPoint.endLW = CGPoint(x: 0, y: 0)
-        // FW
-        
-        // MF
-        // MF
-        
-        // DF
-        // DF
-        
-        // GK
-        // GK
-        // zone (X)
+        positionPoint = PositionPoint(frame: frame)                       
     }
         
     func setCardViews() {
-        let height = frame.height
         let width = frame.width
         
         let distanceFW = width / CGFloat(formation.FW + 1)
@@ -124,8 +91,8 @@ class FieldView: UIView {
     }
     
     func cardViewPositionChanged(tag: Int) {
-//        cardViews[tag].frame.origin.x
-//        cardViews[tag].frame.origin.y
+        let point = CGPoint(x: cardViews[tag].frame.origin.x, y: cardViews[tag].frame.origin.y)
+        print("positionPoint.getPosition(point: point) :: \(positionPoint.getPosition(point: point))")
 //        cardViews[tag].setPosition(position: .GK)
     }
     
