@@ -91,13 +91,12 @@ class FieldView: UIView {
     }
     
     func cardViewPositionChanged(tag: Int) {
-        let point = CGPoint(x: cardViews[tag].frame.origin.x, y: cardViews[tag].frame.origin.y)
+        let point = CGPoint(x: cardViews[tag].center.x, y: cardViews[tag].center.y)
+//        let position = positionPoint.getPosition(point: point)
+//        cardViews[tag].setPosition(position: position)
         print("positionPoint.getPosition(point: point) :: \(positionPoint.getPosition(point: point))")
-//        cardViews[tag].setPosition(position: .GK)
     }
     
-    func getPosition(x: CGFloat, y: CGFloat) {
-        
-    }
     
+
 }

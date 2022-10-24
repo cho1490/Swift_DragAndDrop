@@ -134,41 +134,68 @@ struct PositionPoint {
         let widthLWRW = width / 4
         startLW = CGPoint(x: startFW.x, y: startFW.y)
         endLW = CGPoint(x: startFW.x + widthLWRW, y: endFW.y)
-        print("LW.s: \(startLW.x), \(startLW.y)")
-        print("LW.e: \(endLW.x), \(endLW.y)")
-        
-        let heightST = (endFW.y - startFW.y) / 2
+                
+        let heightF = (endFW.y - startFW.y) / 2
         let widthST = (width - (widthLWRW * 2)) / 3
         startLS = CGPoint(x: endLW.x, y: startFW.y)
-        endLS = CGPoint(x: endLW.x + widthST, y: startFW.y + heightST)
-        print("LS.s: \(startLS.x), \(startLS.y)")
-        print("LS.e: \(endLS.x), \(endLS.y)")
+        endLS = CGPoint(x: endLW.x + widthST, y: startFW.y + heightF)
     
         startST = CGPoint(x: endLS.x, y: startFW.y)
-        endST = CGPoint(x: endLS.x + widthST, y: startFW.y + heightST)
+        endST = CGPoint(x: endLS.x + widthST, y: startFW.y + heightF)
         
         startRS = CGPoint(x: endST.x, y: startFW.y)
-        endRS = CGPoint(x: endST.x + widthST, y: startFW.y + heightST)
+        endRS = CGPoint(x: endST.x + widthST, y: startFW.y + heightF)
+                
+        let widthCF = (width - (widthLWRW * 2)) / 3
+        startLF = CGPoint(x: endLW.x, y: startFW.y + heightF)
+        endLF = CGPoint(x: endLW.x + widthCF, y: startLF.y + heightF)
+        
+        startCF = CGPoint(x: endLF.x, y: startFW.y + heightF)
+        endCF = CGPoint(x: endLF.x + widthCF, y: endFW.y)
+        
+        startRF = CGPoint(x: endCF.x, y: startFW.y + heightF)
+        endRF = CGPoint(x: startRF.x + widthCF, y: endFW.y)
         
         startRW = CGPoint(x: endFW.x - widthLWRW, y: startFW.y)
         endRW = CGPoint(x: endFW.x, y: endFW.y)
-        print("LW.s: \(startRW.x), \(startRW.y)")
-        print("LW.e: \(endRW.x), \(endRW.y)")
-        
-        let widthCF = (width - (widthLWRW * 2)) / 3
-        startLF = CGPoint(x: endLW.x, y: startFW.y + heightST)
-        endLF = CGPoint(x: endLW.x + widthCF, y: endFW.y)
-        print("LF.s: \(startLF.x), \(startLF.y)")
-        print("LF.e: \(endLF.x), \(endLF.y)")
-        
-        startCF = CGPoint(x: endLF.x, y: startFW.y + heightST)
-        endCF = CGPoint(x: endLF.x + widthCF, y: endFW.y)
-        
-        startRF = CGPoint(x: endCF.x, y: startFW.y + heightST)
-        endRF = CGPoint(x: endFW.x - widthLWRW, y: endFW.y)
         // FW
         
         // MF
+        let widthLMRM = width / 4
+        startLM = CGPoint(x: startMF.x, y: startMF.y)
+        endLM = CGPoint(x: startMF.x + widthLMRM, y: endMF.y)
+        
+        let heightCM = (endMF.y - startMF.y) / 3
+        let widthCM = (width - (widthLMRM * 2)) / 3
+        startLAM = CGPoint(x: endLM.x, y: startMF.y)
+        endLAM = CGPoint(x: endLM.x + widthCM, y: startMF.y + heightCM)
+        
+        startCAM = CGPoint(x: endLAM.x, y: startMF.y)
+        endCAM = CGPoint(x: endLAM.x + widthCM, y: startMF.y + heightCM)
+        
+        startRAM = CGPoint(x: endCAM.x, y: startMF.y)
+        endRAM = CGPoint(x: endCAM.x + widthCM, y: startMF.y + heightCM)
+        
+        startLM = CGPoint(x: endLM.x, y: startMF.y + heightCM)
+        endLM = CGPoint(x: endLM.x + widthCM, y: startLM.y + heightCM)
+        
+        startCM = CGPoint(x: endLM.x, y: startMF.y + heightCM)
+        endCM = CGPoint(x: endLM.x + widthCM, y: startCM.y + heightCM)
+        
+        startRM = CGPoint(x: endCM.x, y: startMF.y + heightCM)
+        endRM = CGPoint(x: startRM.x + widthCM, y: startRM.y + heightCM)
+        
+        startLDM = CGPoint(x: endLM.x, y: startMF.y + (heightCM * 2))
+        endLDM = CGPoint(x: startLDM.x + widthCM, y: startLDM.y + heightCM)
+        
+        startCDM = CGPoint(x: endLDM.x, y: startMF.y + (heightCM * 2))
+        endCDM = CGPoint(x: startCDM.x + widthCM, y: startCDM.y + heightCM)
+        
+        startRDM = CGPoint(x: endCDM.x, y: startMF.y + (heightCM * 2))
+        endRDM = CGPoint(x: startRDM.x + widthCM, y: startRDM.y + heightCM)
+        
+        startRM = CGPoint(x: endMF.x - widthCM, y: startLM.y)
+        endRM = CGPoint(x: endLM.x, y: endLM.y)
         // MF
         
         // DF
@@ -215,6 +242,50 @@ struct PositionPoint {
         
         if startRF.x <= x && x <= endRF.x && startRF.y <= y && y <= endRF.y {
             return .RF
+        }
+        
+        if startLM.x <= x && x <= endLM.x && startLM.y <= y && y <= endLM.y {
+            return .LM
+        }
+        
+        if startLAM.x <= x && x <= endLAM.x && startLAM.y <= y && y <= endLAM.y {
+            return .LAM
+        }
+        
+        if startCAM.x <= x && x <= endCAM.x && startCAM.y <= y && y <= endCAM.y {
+            return .CAM
+        }
+        
+        if startRAM.x <= x && x <= endRAM.x && startRAM.y <= y && y <= endRAM.y {
+            return .RAM
+        }
+        
+        if startLCM.x <= x && x <= endLCM.x && startLCM.y <= y && y <= endLCM.y {
+            return .LCM
+        }
+        
+        if startCM.x <= x && x <= endCM.x && startCM.y <= y && y <= endCM.y {
+            return .CM
+        }
+        
+        if startRCM.x <= x && x <= endRCM.x && startRCM.y <= y && y <= endRCM.y {
+            return .RCM
+        }
+        
+        if startLDM.x <= x && x <= endLDM.x && startLDM.y <= y && y <= endLDM.y {
+            return .LDM
+        }
+        
+        if startCDM.x <= x && x <= endCDM.x && startCDM.y <= y && y <= endCDM.y {
+            return .CDM
+        }
+        
+        if startRDM.x <= x && x <= endRDM.x && startRDM.y <= y && y <= endRDM.y {
+            return .RDM
+        }
+        
+        if startRM.x <= x && x <= endRM.x && startRM.y <= y && y <= endRM.y {
+            return .RM
         }
         
         return .GK
