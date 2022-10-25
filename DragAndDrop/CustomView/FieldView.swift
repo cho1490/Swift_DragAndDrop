@@ -45,7 +45,9 @@ class FieldView: UIView {
     func setPositionPoint() {
         positionPoint = PositionPoint(frame: frame)
         
-        addPositionAreaView(start: positionPoint.startLCM, end: positionPoint.endLCM)
+//        addPositionAreaView(start: positionPoint.startFW, end: positionPoint.endFW)
+//        addPositionAreaView(start: positionPoint.startMF, end: positionPoint.endMF)
+//        addPositionAreaView(start: positionPoint.startDF, end: positionPoint.endDF)
     }
     
     func addPositionAreaView(start: CGPoint, end: CGPoint) {

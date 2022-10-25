@@ -35,16 +35,15 @@ enum Position {
     case RDM
     // MF
     
-    // DF .LWB, .RWB, .LB, .LCB, .CB, .RCB, .RB, .SW
+    // DF .LWB, .LCB, .CB, .RCB, .RWB, .LB, .RB, .SW
     case LWB
-    case RWB
-    
-    case LB
     case LCB
     case CB
     case RCB
-    case RB
+    case RWB
     
+    case LB
+    case RB
     case SW
     // DF
             
