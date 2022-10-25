@@ -176,14 +176,14 @@ struct PositionPoint {
         startRAM = CGPoint(x: endCAM.x, y: startMF.y)
         endRAM = CGPoint(x: endCAM.x + widthCM, y: startMF.y + heightCM)
         
-        startLM = CGPoint(x: endLM.x, y: startMF.y + heightCM)
-        endLM = CGPoint(x: endLM.x + widthCM, y: startLM.y + heightCM)
+        startLCM = CGPoint(x: endLM.x, y: startMF.y + heightCM)
+        endLCM = CGPoint(x: startLCM.x + widthCM, y: startLCM.y + heightCM)
         
-        startCM = CGPoint(x: endLM.x, y: startMF.y + heightCM)
-        endCM = CGPoint(x: endLM.x + widthCM, y: startCM.y + heightCM)
+        startCM = CGPoint(x: endLCM.x, y: startMF.y + heightCM)
+        endCM = CGPoint(x: startCM.x + widthCM, y: startCM.y + heightCM)
         
-        startRM = CGPoint(x: endCM.x, y: startMF.y + heightCM)
-        endRM = CGPoint(x: startRM.x + widthCM, y: startRM.y + heightCM)
+        startRCM = CGPoint(x: endCM.x, y: startMF.y + heightCM)
+        endRCM = CGPoint(x: startRCM.x + widthCM, y: startRCM.y + heightCM)
         
         startLDM = CGPoint(x: endLM.x, y: startMF.y + (heightCM * 2))
         endLDM = CGPoint(x: startLDM.x + widthCM, y: startLDM.y + heightCM)
@@ -194,11 +194,14 @@ struct PositionPoint {
         startRDM = CGPoint(x: endCDM.x, y: startMF.y + (heightCM * 2))
         endRDM = CGPoint(x: startRDM.x + widthCM, y: startRDM.y + heightCM)
         
-        startRM = CGPoint(x: endMF.x - widthCM, y: startLM.y)
-        endRM = CGPoint(x: endLM.x, y: endLM.y)
+        startRM = CGPoint(x: endMF.x - widthLMRM, y: startMF.y)
+        endRM = CGPoint(x: endMF.x, y: endMF.y)
         // MF
         
         // DF
+//            .LWB, .RWB, .LB, .LCB, .CB, .RCB, .RB, .SW
+        
+        
         // DF
         
         // GK
@@ -209,8 +212,6 @@ struct PositionPoint {
     func getPosition(point: CGPoint) -> Position {
         let x = point.x
         let y = point.y
-        
-        print("x: \(x), y: \(y)")
         
         if startLW.x <= x && x <= endLW.x && startLW.y <= y && y <= endLW.y {
             return .LW

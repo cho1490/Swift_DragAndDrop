@@ -43,9 +43,17 @@ class FieldView: UIView {
     }
     
     func setPositionPoint() {
-        positionPoint = PositionPoint(frame: frame)                       
-    }
+        positionPoint = PositionPoint(frame: frame)
         
+        addPositionAreaView(start: positionPoint.startLCM, end: positionPoint.endLCM)
+    }
+    
+    func addPositionAreaView(start: CGPoint, end: CGPoint) {
+        let area = UIView(frame: CGRect(x: start.x, y: start.y, width: end.x - start.x, height: end.y - start.y))
+        area.backgroundColor = .gray
+        addSubview(area)
+    }
+    
     func setCardViews() {
         let width = frame.width
         
