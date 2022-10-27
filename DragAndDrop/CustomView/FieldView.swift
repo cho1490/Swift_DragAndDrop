@@ -54,9 +54,9 @@ class FieldView: UIView {
         let area = UIView(frame: CGRect(x: start.x, y: start.y, width: end.x - start.x, height: end.y - start.y))
         area.backgroundColor = .gray
         addSubview(area)
-    }  
+    }
     
-    func setCardViews() {
+    func setCardViews() {   
         let width = frame.width
         
         let distanceFW = width / CGFloat(formation.FW + 1)
