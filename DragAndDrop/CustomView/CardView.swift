@@ -56,6 +56,7 @@ class CardView: UIView {
     
     func setPosition(position: Position) {
         self.position = position
+        print("position :: \(position)")
     }
     
     func getPosition() -> Position {

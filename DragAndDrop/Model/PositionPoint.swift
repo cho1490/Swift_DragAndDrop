@@ -325,6 +325,10 @@ struct PositionPoint {
             return .LB
         }
         
+        if startSW.x <= x && x <= endSW.x && startSW.y <= y && y <= endSW.y {
+            return .SW
+        }
+        
         if startLCB.x <= x && x <= endLCB.x && startLCB.y <= y && y <= endLCB.y {
             return .LCB
         }
@@ -343,10 +347,6 @@ struct PositionPoint {
         
         if startRB.x <= x && x <= endRB.x && startRB.y <= y && y <= endRB.y {
             return .RB
-        }
-        
-        if startSW.x <= x && x <= endSW.x && startSW.y <= y && y <= endSW.y {
-            return .SW
         }
         
         return .GK

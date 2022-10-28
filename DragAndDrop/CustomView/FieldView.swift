@@ -56,7 +56,7 @@ class FieldView: UIView {
         addSubview(area)
     }
     
-    func setCardViews() {   
+    func setCardViews() {
         let width = frame.width
         
         let distanceFW = width / CGFloat(formation.FW + 1)
@@ -102,11 +102,8 @@ class FieldView: UIView {
     
     func cardViewPositionChanged(tag: Int) {
         let point = CGPoint(x: cardViews[tag].center.x, y: cardViews[tag].center.y)
-//        let position = positionPoint.getPosition(point: point)
-//        cardViews[tag].setPosition(position: position)
-        print("positionPoint.getPosition(point: point) :: \(positionPoint.getPosition(point: point))")
+        let position = positionPoint.getPosition(point: point)
+        cardViews[tag].setPosition(position: position)
     }
     
-    
-
 }
