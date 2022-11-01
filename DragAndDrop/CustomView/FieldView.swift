@@ -44,12 +44,9 @@ class FieldView: UIView {
     
     func setPositionPoint() {
         positionPoint = PositionPoint(frame: frame)
-        
-//        addPositionAreaView(start: positionPoint.startFW, end: positionPoint.endFW)
-//        addPositionAreaView(start: positionPoint.startMF, end: positionPoint.endMF)
-//        addPositionAreaView(start: positionPoint.startDF, end: positionPoint.endDF)
     }
     
+    // 영역 표시할 때 사용.
     func addPositionAreaView(start: CGPoint, end: CGPoint) {
         let area = UIView(frame: CGRect(x: start.x, y: start.y, width: end.x - start.x, height: end.y - start.y))
         area.backgroundColor = .gray
